@@ -1,0 +1,9 @@
+all:	so-cpp
+
+.PHONY: all clean
+
+so-cpp:	main.c hashmap.c helpers.c
+	gcc main.c hashmap.c helpers.c -o so-cpp
+
+clean:
+	-rm -f *.o so-cpp
